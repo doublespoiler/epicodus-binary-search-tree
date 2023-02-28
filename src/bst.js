@@ -1,7 +1,11 @@
 export default class BST {
 
-  constructor(){
+  constructor() {
     this.root = null;
+  }
+
+  insertNode(node) {
+    this.root = node;
   }
 
 }
