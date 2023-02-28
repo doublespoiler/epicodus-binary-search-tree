@@ -66,4 +66,12 @@ describe ('binarySearchTree', () => {
     expect(rootNode.left.right.data).toEqual(33);
   });
 
+  test('it should not add duplicate nodes', () => {
+    let bst = new BST();
+    let rootNode = new BSTNode(36);
+    bst.insertNode(rootNode);
+    let node2 = new BSTNode(36);
+    expect(bst.insertNode(node2)).toEqual({"root": {"data": 36, "left": null, "right": null}});
+  });
+
 });

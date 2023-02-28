@@ -21,13 +21,19 @@ export default class BST {
             //traverse the tree
             currentNode = currentNode.left;
           }
+        //insert right
         } else if (currentNode.data < insertedNode.data) {
+          //if current node does NOT have a right
           if(currentNode.right === null) {
-            currentNode.right = insertedNode;
-            return this;
+            currentNode.right = insertedNode; //add it
+            return this; //return out
           } else {
+            //traverse the tree
             currentNode = currentNode.right;
           }
+        } else { //if it is not greater or less than, it is equal
+          //binary trees cannot have duplicate values, so we just return the same thing.
+          return this;
         }
       }
     }
